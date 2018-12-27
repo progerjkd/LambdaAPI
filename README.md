@@ -27,13 +27,23 @@ flywhell to object mapping to DynamoDB, and Zappa to deploy the API using AWS La
 
 ## Stack used
 
-**[Flask](http://flask.pocoo.org/)** is a microframework for Python based on Werkzeug and Jinja 2.
-**[Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/)** is an extension for Flask that adds support for quickly building REST APIs.
-**[Flywheel](https://flywheel.readthedocs.io/en/latest/#)** is a library for mapping python objects to DynamoDB tables. It uses a SQLAlchemy-like syntax for queries.
-**[Zappa](https://github.com/Miserlou/Zappa)** - A system for running serverless Python applications using AWS Lambda and AWS API Gateway. That means **infinite scaling**, **zero downtime**, **zero maintenance** - and at a fraction of the cost of a traditional web server.
-**[AWS Lambda](https://aws.amazon.com/lambda/)** AWS Lambda runs code without provisioning or managing servers.  **AWS Lambda automatically scales the application** by running code in response to each trigger. The code runs in parallel and processes each trigger individually, scaling precisely with the size of the workload.
-**[AWS API Gateway](https://aws.amazon.com/api-gateway/)** Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.
-**[AWS DynamoDB](https://aws.amazon.com/dynamodb/)** Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at **any scale**.
+ - **[Flask](http://flask.pocoo.org/)** is a microframework for Python based on Werkzeug and Jinja 2.
+   **[Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/)** is an extension for Flask that adds support for quickly building REST
+   APIs.
+   **[Flywheel](https://flywheel.readthedocs.io/en/latest/#)** is a library for mapping python objects to DynamoDB tables. It uses a
+   SQLAlchemy-like syntax for queries.
+   **[Zappa](https://github.com/Miserlou/Zappa)** - A system for running serverless Python applications using AWS Lambda and AWS API Gateway.
+   That means **infinite scaling**, **zero downtime**, **zero
+   maintenance** - and at a fraction of the cost of a traditional web
+   server.
+   **[AWS Lambda](https://aws.amazon.com/lambda/)** AWS Lambda runs code without provisioning or managing servers.  **AWS Lambda automatically
+   scales the application** by running code in response to each trigger.
+   The code runs in parallel and processes each trigger individually,
+   scaling precisely with the size of the workload.
+   **[AWS API Gateway](https://aws.amazon.com/api-gateway/)** Amazon API Gateway is a fully managed service that makes it easy for developers
+   to create, publish, maintain, monitor, and secure APIs at any scale.
+   **[AWS DynamoDB](https://aws.amazon.com/dynamodb/)** Amazon DynamoDB is a key-value and document database that delivers single-digit
+   millisecond performance at **any scale**.
 
 ## Requirements
 
