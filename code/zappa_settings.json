@@ -1,0 +1,28 @@
+{
+    "production": {
+        "app_function": "main.app",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "flaskapi",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-pm7f1zs8t",
+        "extra_permissions": [{
+            "Effect": "Allow",
+            "Action": ["dynamodb:*"],
+            "Resource": "*"
+        }],
+        "vpc_config": {
+            "SubnetIds": [ "subnet-0fa293ea221b7c917", "subnet-0dcaffe3fd4096f9a" ],
+            "SecurityGroupIds": [ "sg-0e34d48dc4bf44072" ]
+        }
+    },
+    "production_us_east_2": {
+        "aws_region": "us-east-2",
+        "s3_bucket": "zappa-0z28lw87e",
+        "vpc_config": {
+            "SubnetIds": [ "subnet-0fcdca7746b7ae36a", "subnet-05fbe3009524330a8" ],
+            "SecurityGroupIds": [ "sg-0b9924fdf88fb3472" ]
+        },
+        "extends": "production"
+    }
+}

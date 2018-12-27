@@ -1,0 +1,4 @@
+flask
+flask_restful
+zappa
+flywheel
