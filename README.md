@@ -45,8 +45,8 @@ flywhell to object mapping to DynamoDB, and Zappa to deploy the API using AWS La
  - **[AWS DynamoDB](https://aws.amazon.com/dynamodb/)**: a key-value and document database that delivers single-digit millisecond performance at **any scale**.
 
 ## Requirements
-
- - Python >= 3.6
+ - `bash`
+ - Python 3.6.x (Zappa is not yet compatible with Python 3.7, AWS Lambda added support for Python 3.7 recently)
  - Python virtualenv
  - `awcli` should be installed and configured with valid AWS credentials.
  - `make`
@@ -57,11 +57,8 @@ This is a multi region deployment. The resources will be disposed as described i
 
 ![enter image description here](https://raw.githubusercontent.com/progerjkd/LambdaAPI/master/AWS%20Architecture.png)
 
-As a multi zone deployment, configure the AWS regions in which the app and database will be deployed in the follwing files (defaults to `us-east-1` and `us-east-2`):
 
-    aws-config.sh
-    dynamodb-config.sh
-    code/db.py
+Attention: the commands above should be performed in the `bash` shell. Any shell different of bash can cause fails (mainly in MacOS systems).
 
 Run the Makefile to create the virtualenv, install the required dependencies and provision the AWS resources:
 
@@ -72,6 +69,12 @@ Zappa will automatically package the application and local virtual environment i
 To delete all AWS resources provisioned run:
 
     make destroy
+
+As a multi zone deployment, the AWS regions in which the app and database will be deployed are configured in the follwing files (defaults to `us-east-1` and `us-east-2`):
+
+    aws-config.sh
+    dynamodb-config.sh
+    code/db.py
 
 
 # Running
